@@ -8,18 +8,18 @@ namespace HW04
 {
     class Character
     {
-        private float _hp;
-        public float HP { private set { value = _hp; } get { return _hp; } }
-        private float _attack;
-        public float Attack { private set { value = _attack; } get { return _attack; } }
+        protected float _hp;
+        public float HP { set { _hp = value; } get { return _hp; } }
+        protected float _attack;
+        public float Attack { set { value = _attack; } get { return _attack; } }
         private float _agile;
-        public float Agile { private set { value = _attack; } get { return _attack; } }
+        public float Agile { set { value = _attack; } get { return _attack; } }
         public enum statchacter { Health, Dying, Dead }
         public statchacter inintialStat;
 
         public void ShowStatTable()
         {
-            Console.WriteLine($"STAT: {inintialStat}\nHP:{HP}");
+            Console.WriteLine($"STAT: {inintialStat}\nHP: {HP}\nATTACK: {Attack}\n AGILE: {Agile}");
         }
         
     }

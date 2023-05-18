@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace HW04
 {
-    class Battle
+    class Battle:Character
     {
-        public void AttackEnemy(Character Offender,Character Defender)
+        public void AttackEnemy(Character offender,Character defender)
         {
-            Defender.HP -= Offender.Attack; 
+            defender.HP -= offender.Attack; 
         }
     }
 }
